@@ -24,8 +24,7 @@ for root, dirs, files in os.walk(image_dir):
 				label_ids[label] = current_id
 				current_id += 1
 			id_ = label_ids[label]
-			#y_labels.append(label) # some number
-			#x_train.append(path) # verify this image, turn into a NUMPY arrray, GRAY
+			
 			pil_image = (Image.open(path).convert("L")) # grayscale
 			size = (550, 550)
 			final_image = pil_image.resize(size, Image.ANTIALIAS)
